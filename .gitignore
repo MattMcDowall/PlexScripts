@@ -1,3 +1,6 @@
+# API Credentials — added wildcard because it's on a cloud drive; sometimes Google adds '(1)' or something
+Credentials*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
