@@ -1,7 +1,6 @@
-# Check songs on Compliation & Anthology albums, to see if I have the same song on a regular album
+# Check songs on Compilation & Anthology albums, to see if I have the same song on a regular album
 # If so, mark the comp/anth version as "Dupe" so it will be excluded from most Smart Playlists
 import Credentials
-
 plex = Credentials.plex_connect()  # Connect to plex server
 
 for collxnTitle in ["Compilations", "Anthologies"]:
