@@ -17,7 +17,7 @@ Some of the scripts may make use of other packages, but usually nothing too exot
 ## **A note on authentication**
 PlexAPI allows a [couple of different methods](https://python-plexapi.readthedocs.io/en/latest/introduction.html#getting-a-plexserver-instance) to get a server instance to work with. I'm trying to keep these scripts agnostic on that decision, and also to keep the credentials private. My approach is to tackle the authentication and get a server instance from an external file, and then call that file from these scripts.
 
-What I've done is to create a script called `Credentials.py` which resides in this folder on my computer. To keep it private, I've added a line in the .gitignore file which filters it out of any pushes to the public repository. So you'll need to create your own Credentials.py file, in this same directory.
+What I've done is to create a script called `Credentials.py` which resides in this folder on my computer. To keep it private, I've added a line in the `.gitignore` file which filters it out of any pushes to the public repository. So you'll need to create your own Credentials.py file, in this same directory.
 
 Depending on which method of authentication you prefer, the contents of Credentials.py look either like this:
 
