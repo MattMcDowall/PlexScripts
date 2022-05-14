@@ -1,5 +1,16 @@
 # Check songs on Compilation & Anthology albums, to see if I have the same song on a regular album
 # If so, mark the comp/anth version as "Dupe" so it will be excluded from most Smart Playlists
+
+# I'm using "compilation" to refer to an album that has tracks from different artists—a soundtrack,
+#   for instance, or a record-company retrospective box set.
+# And an "anthology" is an album consisting mostly of previously released material, but all from the
+#   same artist. The typical example would be a Greatest Hits album.
+
+# This script requires you to have two collections in Plex—"Compilations," and "Anthologies." You'll
+#    have to manually add these & add the appropriate albums into them. You could potentially tweak
+#    it to get the compilations on the fly, by looking for any track with "Various Artists" as the
+#    grandparentTitle (album artist). There's really no way to do that for anthologies, though.
+
 import Credentials
 plex = Credentials.plex_connect()  # Connect to plex server
 
