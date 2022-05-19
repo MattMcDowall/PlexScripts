@@ -1,5 +1,5 @@
 # Check songs on Compilation & Anthology albums, to see if I have the same song on a regular album
-# If so, mark the comp/anth version as "Dupe" so it will be excluded from most Smart Playlists
+# If so, mark the comp/anth version as "Dupe" (as a Mood) so it can be excluded from Smart Playlists
 
 # I'm using "compilation" to refer to an album that has tracks from different artists—a soundtrack,
 #   for instance, or a record-company retrospective box set.
