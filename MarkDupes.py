@@ -8,11 +8,15 @@
 
 # This script requires you to have two collections in Plex—"Compilations," and "Anthologies." You'll
 #    have to manually add these & add the appropriate albums into them. You could potentially tweak
-#    it to get the compilations on the fly, by looking for any track with "Various Artists" as the
-#    grandparentTitle (album artist). There's really no way to do that for anthologies, though.
+#    it to get the *compilations* on the fly, by looking for any track with "Various Artists" as the
+#    grandparentTitle (album artist). There's no effective way to do that for anthologies, though.
 
-import Credentials
-plex = Credentials.plex_connect()  # Connect to plex server
+from plexapi.myplex import MyPlexAccount
+
+print('Connecting to server . . .')
+account = MyPlexAccount()   # Credentials retrieved from PlexAPI config.ini file
+print('    . . . connection established.')
+plex = account.resource('MEDIA').connect()
 
 for collxnTitle in ["Compilations", "Anthologies"]:
     for collxn in plex.library.section('Music').search(filters={"title==": collxnTitle}, libtype="collection"):
