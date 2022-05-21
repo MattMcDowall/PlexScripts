@@ -1,4 +1,4 @@
-# For details on this script, see the MarkDupes-README.md file in this repo
+# For details on this script, see the README.md file in this repo
 
 from plexapi.myplex import MyPlexAccount
 
