@@ -16,3 +16,6 @@ Some of the scripts may make use of other packages, but usually nothing too exot
 
 ## **Authentication**
 Authentication is accomplished by means of a [PlexAPI config file](https://python-plexapi.readthedocs.io/en/latest/configuration.html). It's really easy to set up, and keeps that information securely out of potentially public folders like this git repository.
+
+## **Why so “Mood”y?**
+You may notice that some of the scripts here use Plex's "Mood" feature to mark things—to mark duplicate tracks, e.g. Obviously, this isn't what the "Mood" is supposed to indicate (it's designed to be kind of a sub-genre indicator). However, Plex doesn't provide a sanctioned way to tag things, especially at the level of individual tracks. I needed to hijack another tag in order to attach some of these indicators. The Mood tag seemed the least likely to have accidental side effects, and it has the benefit of being available as a Smart-Playlist criterion.
