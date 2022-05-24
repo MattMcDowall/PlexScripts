@@ -12,9 +12,10 @@ for collxnTitle in ["Compilations", "Anthologies"]:
         for album in collxn.items():
             print(album.parentTitle, '|', album.title, sep=' ')
             for compTrack in album.tracks():
-                # Seems to crash if the track title begins with an apostrophe, so skip those
-                # And of course skip any that are already marked as dupes
-                if ((not compTrack.title.startswith("'")) & (all(m.tag != "Dupe" for m in compTrack.moods))):
+                # - To speed things up, also limit to *rated* tracks
+                # - Seems to crash if the track title begins with an apostrophe, so skip those
+                # - Skip any that are already marked as dupes
+                if ((compTrack.userRating is not None) & (not compTrack.title.startswith("'")) & (all(m.tag != "Dupe" for m in compTrack.moods))):
                     # Search for:
                     #   *exact* title match AND
                     #   *non-matching* id (ratingKey) AND
